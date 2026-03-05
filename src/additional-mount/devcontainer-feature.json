@@ -1,0 +1,53 @@
+{
+  "id": "additional-mount",
+  "name": "Additional Mount into Container",
+  "version": "1.0.0",
+  "description": "Mount multiple host paths into container (source/target are controlled by local environment variables)",
+  "mounts": [
+    {
+      "source": "${localEnv:ADDITIONAL_MOUNT_SOURCE_1:/tmp}",
+      "target": "${localEnv:ADDITIONAL_MOUNT_TARGET_1:/tmp/additional-mount-1}",
+      "type": "bind"
+    },
+    {
+      "source": "${localEnv:ADDITIONAL_MOUNT_SOURCE_2:/tmp}",
+      "target": "${localEnv:ADDITIONAL_MOUNT_TARGET_2:/tmp/additional-mount-2}",
+      "type": "bind"
+    },
+    {
+      "source": "${localEnv:ADDITIONAL_MOUNT_SOURCE_3:/tmp}",
+      "target": "${localEnv:ADDITIONAL_MOUNT_TARGET_3:/tmp/additional-mount-3}",
+      "type": "bind"
+    },
+    {
+      "source": "${localEnv:ADDITIONAL_MOUNT_SOURCE_4:/tmp}",
+      "target": "${localEnv:ADDITIONAL_MOUNT_TARGET_4:/tmp/additional-mount-4}",
+      "type": "bind"
+    },
+    {
+      "source": "${localEnv:ADDITIONAL_MOUNT_SOURCE_5:/tmp}",
+      "target": "${localEnv:ADDITIONAL_MOUNT_TARGET_5:/tmp/additional-mount-5}",
+      "type": "bind"
+    },
+    {
+      "source": "${localEnv:ADDITIONAL_MOUNT_SOURCE_6:/tmp}",
+      "target": "${localEnv:ADDITIONAL_MOUNT_TARGET_6:/tmp/additional-mount-6}",
+      "type": "bind"
+    },
+    {
+      "source": "${localEnv:ADDITIONAL_MOUNT_SOURCE_7:/tmp}",
+      "target": "${localEnv:ADDITIONAL_MOUNT_TARGET_7:/tmp/additional-mount-7}",
+      "type": "bind"
+    },
+    {
+      "source": "${localEnv:ADDITIONAL_MOUNT_SOURCE_8:/tmp}",
+      "target": "${localEnv:ADDITIONAL_MOUNT_TARGET_8:/tmp/additional-mount-8}",
+      "type": "bind"
+    },
+    {
+      "source": "${localEnv:ADDITIONAL_MOUNT_SOURCE_9:/tmp}",
+      "target": "${localEnv:ADDITIONAL_MOUNT_TARGET_9:/tmp/additional-mount-9}",
+      "type": "bind"
+    }
+  ]
+}
