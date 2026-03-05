@@ -15,6 +15,15 @@
 - `ADDITIONAL_MOUNT_SOURCE_4` 〜 `ADDITIONAL_MOUNT_SOURCE_9`
 - `ADDITIONAL_MOUNT_TARGET_4` 〜 `ADDITIONAL_MOUNT_TARGET_9`
 
+## 想定
+
+devcontainer.json に mount設定が記述できるなら、それが正当な設定です。
+
+この`feature`の想定は、ユーザーのsettings.jsonに `dev.containers.defaultFeatures` として記述されることです。
+そうすると、環境変数に従って、(`devcontainer.json`とは関係なく)追加`mount`できます。
+
+これは、git管理されている`devcontainer.json`を汚したくない場合に有効です。
+
 ## 例
 
 ```bash
@@ -28,12 +37,12 @@ export ADDITIONAL_MOUNT_SOURCE_3="$HOME/.ssh"
 export ADDITIONAL_MOUNT_TARGET_3="/home/vscode/.ssh-host"
 ```
 
+
 ```jsonc
 {
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "./src/additional-mount": {}
-  }
+  "dev.containers.defaultFeatures": {
+    "ghcr.io/tanihiroki/devcontainer-features/additional-mount:latest": {},
+  },
 }
 ```
 
