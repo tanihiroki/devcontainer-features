@@ -1,0 +1,8 @@
+{
+    "additional_mount": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "additional-mount": {}
+        }
+    }
+}
